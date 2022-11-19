@@ -1,0 +1,12 @@
+<table>
+	<tbody>
+		<tr *ngFor="let row of board; index as i">
+			<td *ngFor="let square of row; index as j">
+				<boggle-letter-cube
+					[value]="board[i][j]"
+					[gameStarted]="gameStarted"
+				></boggle-letter-cube>
+			</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,15 @@
+<mat-form-field>
+	<mat-label>Enter word</mat-label>
+	<input
+		matInput
+		#wordInput
+		(keydown.enter)="addWord(wordInput.value)"
+		[(ngModel)]="currentWord"
+	/>
+</mat-form-field>
+
+<p>Your Words:</p>
+<p *ngIf="wordList.length == 0">No words yet!</p>
+<ul *ngIf="wordList.length > 0">
+	<li *ngFor="let word of wordList">{{ word }}</li>
+</ul>

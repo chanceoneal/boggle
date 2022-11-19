@@ -1,0 +1,5 @@
+<h2>{{ name }}</h2>
+<p *ngIf="!isClient">Potential words found: {{ wordCount }}</p>
+<div *ngIf="name && isClient">
+	<boggle-word-list (wordsFound)="getWordCount($event)"></boggle-word-list>
+</div>
